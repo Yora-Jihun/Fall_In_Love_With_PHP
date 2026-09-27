@@ -18,6 +18,8 @@ You've been cooking in Chapters 1 through 5, but nothing has actually reached a 
 
 Both display exactly what you give them. If you give them a string, they display that string. If you give them a number, PHP converts it to text automatically before displaying it.
 
+One small heads-up. Later, you'll meet two more tools with similar names: `var_dump()` in Chapter 7 and `print_r()` in Chapter 19. Don't mix up `print_r()` with `print`. They're different tools. `echo` and `print` serve the dish to the customer. `var_dump()` and `print_r()` are for you, the cook, to peek inside a variable and see exactly what it holds. For now, `echo` is all you need.
+
 ## In the Code Kitchen
 
 ```php
@@ -67,7 +69,7 @@ $total = 250;
 echo 'Your total is $total pesos.';
 ```
 
-Single quotes don't interpolate variables. Inside single quotes, `$total` is just four characters and a dollar sign, nothing more. PHP has no reason to look it up as a variable.
+Single quotes don't interpolate variables. Inside single quotes, `$total` is just a dollar sign and five letters, nothing more. PHP has no reason to look it up as a variable.
 
 **Lesson:** if you want a variable's value to appear inside a string, either use double quotes for interpolation, or use concatenation with the `.` operator, which works with either quote style.
 

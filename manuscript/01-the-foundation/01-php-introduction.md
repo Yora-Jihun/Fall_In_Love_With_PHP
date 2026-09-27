@@ -6,17 +6,23 @@
 
 ## Day One
 
-You show up at Chef Jirrum's Kitchen ten minutes early. You'll learn that this is already ten minutes late by kitchen standards. Chef Jirrum is at the counter, wiping down a surface that doesn't look dirty, and doesn't look up right away.
+You came to Chef Jirrum's Kitchen to learn how to code. So you expected a classroom. Instead, you find pots on the stove, knives on the wall, and the smell of garlic frying in oil.
 
-"Cook," he says, which is apparently your name now, "why are you here?"
+"Wait," you say. "I think I'm in the wrong place."
 
-You mumble something about wanting to learn to cook.
+"You're in the right place," says Chef Jirrum. He's at the counter, wiping down a surface that doesn't look dirty. "You came to learn to code, and you will. You'll just learn it the way a cook learns a kitchen."
 
-"Wrong answer," he says. "Wanting to cook, and wanting the dish, are two different things. Anyone can want a plate of adobo, that's chicken or pork, slow-braised in vinegar, soy sauce, and garlic. Not everyone wants to stand at a hot stove for forty minutes getting the vinegar-to-soy ratio exactly right."
+He finally looks up. "Cook," he says. I guess that's your name now. "Why are you here?"
+
+You say, a little quietly, that you want to build websites.
+
+"Wrong answer," he says. "Wanting to build something and wanting the finished thing are not the same. Take adobo. Everyone loves a plate of it. You pick chicken or pork, just one. You fry it in a bit of oil with garlic and onion. Then you let it cook slowly in soy sauce, vinegar, and water, with bay leaves and black peppercorns. Some cooks add a little sugar to make it sweet. Some add red or green chili to make it spicy. Some add potatoes. Some add all three. Everyone wants to eat it. Not everyone wants to stand at a hot stove for forty minutes getting the vinegar and soy sauce just right."
 
 He tosses you an apron. It's a little too big.
 
-"It's the same with code," he says. "Plenty of people want to make a website. Very few actually want to learn how it's cooked. That's why we're here. So let's start with the one question you should be able to answer before you write a single line. What, exactly, is this PHP thing?"
+"Code works the same way," he says. "A dish is built from ingredients and techniques. A program is built from the basics, things like variables, conditions, loops, and functions. Learn them well, and one day you'll write your own recipes. Skip them, and every dish is a guess."
+
+"In this kitchen, you're the chef of your own work. My job is to hand you the ingredients and help you cook your way through real problems. So let's start with the one question you should be able to answer before you write a single line. What, exactly, is this PHP thing?"
 
 ## The Concept
 
@@ -40,7 +46,9 @@ Chef Jirrum's take: "You don't need to know every recipe from every era to be a 
 
 Every dish needs a first attempt, even a small one. Let's cook the smallest possible thing PHP can make: proof that the kitchen is open.
 
-Create a file named `hello.php` and type exactly this:
+First, you need a place to write code. This book uses **VS Code** (Visual Studio Code). It's a free code editor for Windows, macOS, and Linux, and it's one of the most popular editors for PHP. You can download it from code.visualstudio.com. Other editors work too, like PhpStorm or Sublime Text. But every example in this book is shown in VS Code.
+
+Open VS Code, create a new file named `hello.php`, and type exactly this:
 
 ```php
 <?php
@@ -53,7 +61,9 @@ Two things are happening here, and both matter more than they look:
 1. **`<?php`** is the opening tag. It's how you tell the server, "everything from here is PHP, not plain text." Without it, the server would just serve your code as-is, the way it would serve a `.txt` file. No cooking happens.
 2. **`echo`** hands something to the browser to display. We'll spend a full chapter on `echo` later. For now, just know it's the line that says "plate this and send it out."
 
-Notice there's no closing `?>` tag at the end of the file. That's not a typo. It's the professional habit, and you're learning it from line one instead of correcting it later. When a file contains *only* PHP, the closing tag is left out on purpose, because any stray space or blank line after `?>` can accidentally leak into what gets sent to the browser. Think of it as a phantom crumb on a plate that's supposed to be spotless.
+Notice there's no closing `?>` tag at the end of the file. That's not a mistake. Good PHP developers leave it out, and it's easier to learn the habit now than to fix it later.
+
+Here's why. When a file has *only* PHP in it, anything after `?>` gets sent to the browser too. Even an extra space or an empty line you didn't notice. It's like a small crumb left on a clean plate. You didn't mean to put it there, but the customer still gets it. Leave out the `?>`, and there's nothing extra to send.
 
 One more thing that trips up almost every new cook. **You can't just double-click `hello.php` and see it work.** Opening it directly in a browser (a `file://` address) shows you the raw code, or nothing useful at all, because there's no PHP processor involved. There's no kitchen, just the recipe card. PHP files have to be requested *through* a server that knows how to run PHP. That's exactly what the next chapter sets up on your own machine.
 
@@ -86,6 +96,7 @@ You don't have a local server running yet. That's next chapter. So cook these wi
 - PHP stands for "PHP: Hypertext Preprocessor" and started in 1994 as a small personal tool before growing into a major web language.
 - PHP is **server-side**. It runs on the server and produces output (usually HTML) before anything reaches the browser. It's the kitchen, not the dining table.
 - Modern PHP means PHP 8.x. This book teaches the current, professional way of writing PHP from the start.
+- This book uses VS Code as its code editor. Other editors, like PhpStorm or Sublime Text, work too.
 - A PHP file needs the `<?php` opening tag, is typically run without a closing `?>` tag, and must be requested through a server that can execute PHP, not opened directly as a file.
 - PHP remains one of the most widely used server-side languages on the web, powering huge platforms and popular tools like WordPress, Laravel, and Symfony.
 

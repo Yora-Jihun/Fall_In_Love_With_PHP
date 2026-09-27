@@ -48,11 +48,13 @@ For displaying numbers nicely, especially money, `number_format()` is the tool t
 ```php
 <?php
 
-$total = 12500.5;
-echo number_format($total, 2); // 12,500.50
+$total = 24403.344433;
+echo number_format($total, 2); // 24,403.34
 ```
 
-The second argument tells it how many decimal places to show. It also adds thousands separators automatically, which plain arithmetic never gives you for free.
+Math often leaves you with long, messy decimals like this one. Nobody pays 24,403.344433 pesos. The second argument, `2`, tells `number_format()` to show only two decimal places, the cents. It also adds the comma for thousands, which plain math never gives you for free.
+
+Note that `number_format()` rounds. It doesn't just cut off the extra digits. So `24403.346` would show as `24,403.35`, not `24,403.34`.
 
 A few more genuinely useful functions:
 

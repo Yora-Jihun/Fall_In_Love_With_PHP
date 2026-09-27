@@ -82,7 +82,7 @@ This is the canonical mapping. Reuse these terms consistently instead of inventi
 | PHP Concept | Kitchen Metaphor |
 |---|---|
 | PHP itself | The style and method of cooking used in this kitchen |
-| Local server (e.g., a local PHP dev environment) | The practice kitchen, before you cook for real guests (production) |
+| Local server (this book uses Herd; sites live in folders inside `Herd` and load at `http://<folder>.test`; the book's editor is VS Code, set as Herd's IDE) | The practice kitchen, before you cook for real guests (production) |
 | Browser / output | The dining table where the finished dish is served |
 | Variable | A labeled container holding one ingredient at a time |
 | Data types | Categories of ingredients: text (`string`), measurements (`int`/`float`), yes-or-no taste checks (`bool`), a tray of several items (`array`) |

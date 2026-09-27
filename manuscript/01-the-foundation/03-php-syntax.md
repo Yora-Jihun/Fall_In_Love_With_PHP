@@ -61,7 +61,7 @@ The second version fails to run at all. PHP doesn't guess where one instruction 
 
 ## Kitchen Notes (Best Practices)
 
-- **Turn on error display while you're learning.** A local PHP setup can be configured to show errors directly on the page, which turns a blank white screen into a useful message pointing at the exact line that broke. In XAMPP, this is usually already on by default for local development.
+- **Turn on error display while you're learning.** A local PHP setup can be configured to show errors directly on the page, which turns a blank white screen into a useful message pointing at the exact line that broke. This is controlled by a setting called `display_errors` in a file called `php.ini`.
 - **Read error messages from the bottom up when there are several.** The first error is often the real one. The rest can just be side effects of that first mistake.
 - **Keep indentation consistent.** It costs nothing, and it's the difference between a recipe you can read at a glance and one you have to decode.
 
@@ -77,7 +77,7 @@ The real problem is his local setup has error display turned off, which is actua
 
 1. Write a short PHP file that intentionally forgets a semicolon. Run it, read the error message it produces, then fix it.
 2. Write one PHP file that mixes plain HTML with a single PHP block in the middle, similar to the menu example above.
-3. Look up how to enable error display in your specific local setup (XAMPP's `php.ini` file, for instance), and confirm it's turned on.
+3. Find the `php.ini` file your Herd PHP version uses, and check that `display_errors` is set to `On`. (Herd's documentation shows where this file lives on your system.)
 
 ## Recap
 

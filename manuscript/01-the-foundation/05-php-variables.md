@@ -55,10 +55,10 @@ You can also build a new variable out of others:
 <?php
 
 $firstName = "Jirrum";
-$lastName = "Santos";
+$lastName = "Edica";
 $fullName = $firstName . " " . $lastName;
 
-echo $fullName; // Jirrum Santos
+echo $fullName; // Jirrum Edica
 ```
 
 That `.` is the string concatenation operator, joining pieces of text together. It gets its own detailed look in the Strings chapter.

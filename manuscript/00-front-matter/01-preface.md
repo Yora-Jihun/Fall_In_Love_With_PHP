@@ -17,8 +17,8 @@ A few honest promises before we start cooking:
 ### What you need before Chapter 1
 
 - A computer (Windows, macOS, or Linux all work fine).
-- A local PHP environment, such as XAMPP, Laragon, Herd, or PHP installed directly. This is covered in the very next chapter. Think of it as setting up your own practice kitchen before you cook for real guests.
-- A text editor. VS Code is a common, free choice.
+- A local PHP environment. This book uses Herd, a free tool for Windows and macOS that's easy to set up and easy to keep up to date. This is covered in Chapter 2. Think of it as setting up your own practice kitchen before you cook for real guests.
+- A code editor. This book uses VS Code, which is free. Other editors, like PhpStorm or Sublime Text, work too.
 - No prior programming experience required. Curiosity and a willingness to burn a dish or two along the way are the only prerequisites.
 
 ### How this book is organized
