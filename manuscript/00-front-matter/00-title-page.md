@@ -6,4 +6,4 @@
 
 ---
 
-*For everyone who ever stared at a syntax error and just wished, for once, it would run on the first try.*
+*For everyone about to learn that a good recipe and good code are made the same way: one step at a time.*
