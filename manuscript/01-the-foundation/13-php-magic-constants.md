@@ -16,7 +16,7 @@ These are called **magic constants**, and each one starts and ends with two unde
 - `__FILE__`: the full path to the current file.
 - `__DIR__`: the full path to the folder containing the current file.
 - `__FUNCTION__`: the name of the current function, used only inside a function.
-- `__CLASS__`: the name of the current class, used only inside a class (covered in Part 4 of this book).
+- `__CLASS__`: the name of the current class, used only inside a class (a more advanced way of organizing code).
 
 They're most often used for debugging and logging, situations where knowing exactly where a piece of code ran from is genuinely useful information.
 
@@ -34,7 +34,7 @@ echo "<br>";
 echo "This folder is: " . __DIR__;
 ```
 
-Inside a function, `__FUNCTION__` reports that function's own name, which is handy for quick debug messages without hardcoding the function's name as a string, something that would silently go stale if the function were ever renamed:
+Inside a function, `__FUNCTION__` reports that function's own name, which is handy for quick debug messages without hardcoding the function's name as a string, something that would silently go stale if the function were ever renamed. (Functions get their own chapter later, in Chapter 18. For now, just know that a function is a named set of steps you can run by calling its name.)
 
 ```php
 <?php
@@ -64,21 +64,25 @@ $configPath = __DIR__ . "/config.php";
 
 ## Yoras' Mistake
 
-Yoras moves his project to a new folder structure, and a script that used to work now throws an error trying to include a configuration file:
+Yoras keeps his helper code in `includes/helpers.php`, which loads the kitchen's settings file like this:
 
 ```php
 <?php
 
-require "../config.php"; // breaks once the folder structure changes
+// includes/helpers.php
+require "../config.php";
 ```
 
-The relative path `"../config.php"` depended entirely on the exact folder the script happened to be run from. The moment that changed, the path pointed at the wrong place.
+When he opens `helpers.php` directly, it works. But when his `index.php` page includes `helpers.php`, it suddenly fails with an error saying `config.php` can't be found.
 
-**Lesson:** anchor include and require paths to `__DIR__` instead of a relative path, so the path stays correct no matter where the script is executed from:
+The problem is how PHP reads a relative path like `"../config.php"`. It doesn't start from the file where that line is written. It starts from the folder of the main page that was opened, which here is `index.php`. From there, `..` goes up one level too many, and PHP ends up looking for `config.php` outside the project.
+
+**Lesson:** anchor include and require paths to `__DIR__` instead of a relative path. `__DIR__` is always the folder of the file the line is written in, so the path stays correct no matter which page includes it:
 
 ```php
 <?php
 
+// includes/helpers.php
 require __DIR__ . "/../config.php";
 ```
 
