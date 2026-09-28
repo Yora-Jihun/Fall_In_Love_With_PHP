@@ -103,6 +103,28 @@ sort($menu); // sorts the array alphabetically, in place
 print_r($menu); // prints the whole array in a readable format, useful for debugging
 ```
 
+**Seeing what's inside an array**
+
+```php
+<?php
+
+$dish = ["name" => "Sinigang", "price" => 180, "spicy" => false];
+
+echo $dish; // prints just "Array" (with a warning), no details at all
+
+print_r($dish);
+// Array ( [name] => Sinigang [price] => 180 [spicy] => )
+
+var_dump($dish);
+// array(3) {
+//   ["name"]=> string(8) "Sinigang"
+//   ["price"]=> int(180)
+//   ["spicy"]=> bool(false)
+// }
+```
+
+`print_r()` is quick and easy to read, but notice that `false` shows up as nothing at all. `var_dump()` is noisier, but it shows each value's type and length, so it's the one to reach for when you need to know exactly what's inside.
+
 Two more functions worth knowing early, since they come up constantly once you're comfortable with the basics: `array_map()` applies a function to every item in an array and returns a new array of the results, and `array_filter()` returns only the items that pass a given check.
 
 ```php
@@ -114,7 +136,7 @@ $withTax = array_map(fn($price) => $price * 1.12, $prices);
 print_r($withTax); // each price increased by 12%
 
 $expensiveOnly = array_filter($prices, fn($price) => $price > 150);
-print_r($expensiveOnly); // only 200 and 300
+print_r($expensiveOnly); // only 200 and 300, keeping their original keys [1] and [2]
 ```
 
 ## Kitchen Notes (Best Practices)
