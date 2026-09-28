@@ -1,6 +1,6 @@
 **The Code Kitchen: Learn to Code in PHP, Filipino-Style**
 
-Copyright © 2026 Yora Ji-hun. All rights reserved.
+Copyright © 2027 Yora Ji-hun. All rights reserved.
 
 No part of this book may be copied or shared without permission from the author, except for short quotes in reviews.
 
