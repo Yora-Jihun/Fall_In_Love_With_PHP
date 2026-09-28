@@ -23,6 +23,8 @@ The mode you choose with `fopen()` matters a great deal:
 
 ## In the Code Kitchen
 
+Create a new file named `write-file.php` in your `kitchen` folder, and open it at `http://kitchen.test/write-file.php`. Type each example below into that file, one at a time, and save it (Ctrl+S, or Cmd+S on a Mac) before you refresh the page. The page itself stays blank, since these examples write to files instead of the browser. After each one runs, open `order-log.txt` or `menu.txt` in VS Code to see what changed.
+
 **The simple, common case**
 
 ```php

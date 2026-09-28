@@ -24,6 +24,8 @@ Inside those tags, a few rules apply everywhere:
 
 ## In the Code Kitchen
 
+Create a new file named `syntax.php` in your `kitchen` folder, and open it at `http://kitchen.test/syntax.php`. Type each example below into that file, one at a time. Save the file (Ctrl+S, or Cmd+S on a Mac) before you refresh the page, or the browser will still show the old version.
+
 Here's PHP mixed into HTML, which is legal and common:
 
 ```php

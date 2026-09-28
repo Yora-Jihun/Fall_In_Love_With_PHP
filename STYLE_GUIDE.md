@@ -62,6 +62,7 @@ These rules aren't Laravel-specific, since this is core PHP. But the underlying 
 - **Small, named, single-purpose functions.** This mirrors "one recipe, one dish." A function should do one thing a reader can name.
 - **Testable mindset.** Where it fits naturally (Functions, Exceptions, and later OOP chapters), show how you'd check that a piece of code actually works. A quick manual check or a simple assertion is enough. Frame this as "taste before you serve it." There's no need for a full testing framework in the core chapters. The habit matters more than the tool here.
 - **Modern PHP.** Use current PHP 8.x idioms (typed properties, arrow functions, `match`, named arguments, constructor property promotion once OOP starts) instead of outdated PHP 5 or PHP 7 era patterns, unless the point of the section is explicitly historical.
+- **Tell the reader where the code goes.** At the start of each chapter's "In the Code Kitchen" section, name one practice file in the `kitchen` folder and the address to open it at, for example: "Create a new file named `arrays.php` in your `kitchen` folder, and open it at `http://kitchen.test/arrays.php`." Always name every file when an example uses more than one file (include, forms that submit to another page, cookies or sessions across pages, file handling, uploads). Don't label small single snippets beyond that.
 
 ## 7. Chapter Template
 

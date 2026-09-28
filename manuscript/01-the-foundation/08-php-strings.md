@@ -19,6 +19,8 @@ Beyond that, PHP includes a large library of built-in functions for working with
 
 ## In the Code Kitchen
 
+Create a new file named `strings.php` in your `kitchen` folder, and open it at `http://kitchen.test/strings.php`. Type each example below into that file, one at a time. Save the file (Ctrl+S, or Cmd+S on a Mac) before you refresh the page, or the browser will still show the old version.
+
 **Combining strings**
 
 ```php

@@ -25,10 +25,12 @@ Here's the single most important idea in this whole chapter, one that shapes eve
 
 ## In the Code Kitchen
 
+Create a new file named `superglobals.php` in your `kitchen` folder, and open it at `http://kitchen.test/superglobals.php?id=5`. Type each example below into that file, one at a time. Save the file (Ctrl+S, or Cmd+S on a Mac) before you refresh the page, or the browser will still show the old version. Try removing `?id=5` from the address too, and watch what changes.
+
 ```php
 <?php
 
-// visiting page.php?id=5 makes this available:
+// visiting superglobals.php?id=5 makes this available:
 echo $_GET["id"] ?? "No ID provided"; // 5
 
 echo "<br>";

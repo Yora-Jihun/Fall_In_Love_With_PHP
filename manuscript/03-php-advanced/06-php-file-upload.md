@@ -24,6 +24,10 @@ Here is the single most important fact in this entire chapter: **`name` and `typ
 
 ## In the Code Kitchen
 
+Create a new file named `upload.php` in your `kitchen` folder. Next to it, create an empty folder named `uploads`, which is where the saved images will go. The PHP handling code goes at the top of `upload.php`, and the form goes below it, the same shape as the order form in Chapter 22. Save the file (Ctrl+S, or Cmd+S on a Mac), then open `http://kitchen.test/upload.php`.
+
+Keeping `uploads` inside `kitchen` is fine for practice on your own computer. For a real website, see the Kitchen Notes below.
+
 The form:
 
 ```html
@@ -34,7 +38,7 @@ The form:
 </form>
 ```
 
-Handling it, with the checks that actually matter:
+Handling it at the top of `upload.php`, with the checks that actually matter:
 
 ```php
 <?php

@@ -35,6 +35,8 @@ function calculateTotal(int $quantity, float $unitPrice): float {
 
 ## In the Code Kitchen
 
+Create a new file named `functions-practice.php` in your `kitchen` folder, and open it at `http://kitchen.test/functions-practice.php`. Type each example below into that file, one at a time. Save the file (Ctrl+S, or Cmd+S on a Mac) before you refresh the page, or the browser will still show the old version.
+
 ```php
 <?php
 

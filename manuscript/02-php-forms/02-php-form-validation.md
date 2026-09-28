@@ -21,6 +21,8 @@ A common, reliable pattern looks like this:
 
 ## In the Code Kitchen
 
+Open `order.php` from the last chapter, and replace everything in it with this:
+
 ```php
 <?php
 

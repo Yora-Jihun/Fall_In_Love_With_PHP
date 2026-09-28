@@ -20,6 +20,8 @@ The choice between `include` and `require` is really a question: **is the rest o
 
 ## In the Code Kitchen
 
+This chapter uses more than one file, so create each one in your `kitchen` folder as you go. Save every file (Ctrl+S, or Cmd+S on a Mac) before you refresh the page. An unsaved `header.php` is a header the other page can't see.
+
 A shared header file, `header.php`:
 
 ```php
@@ -34,7 +36,7 @@ A shared header file, `header.php`:
 </header>
 ```
 
-Using it from another page, anchored with `__DIR__` from Chapter 13 so the path stays correct no matter where the script runs from:
+Using it from another page, `menu.php`, anchored with `__DIR__` from Chapter 13 so the path stays correct no matter where the script runs from:
 
 ```php
 <?php
@@ -46,6 +48,8 @@ require __DIR__ . "/header.php";
 </main>
 ```
 
+Open `http://kitchen.test/menu.php`. The header from `header.php` shows up at the top, even though `menu.php` never wrote it out itself.
+
 `include_once` and `require_once` matter most when a file might get pulled in from multiple places in one request. A shared file defining functions or constants is a common example. Including it twice would attempt to redefine those functions, causing a fatal error:
 
 ```php
@@ -53,6 +57,8 @@ require __DIR__ . "/header.php";
 
 require_once __DIR__ . "/functions.php"; // safe, even if another file already included it
 ```
+
+To try this line, you need a `functions.php` file in the same folder. The Take-Home Practice below walks you through making one.
 
 ## Kitchen Notes (Best Practices)
 

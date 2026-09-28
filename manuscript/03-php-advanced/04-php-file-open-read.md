@@ -17,6 +17,10 @@ PHP gives you two main approaches, and which one you reach for depends mostly on
 
 ## In the Code Kitchen
 
+Create a new file named `read-file.php` in your `kitchen` folder, and open it at `http://kitchen.test/read-file.php`. Type each example below into that file, one at a time. Save the file (Ctrl+S, or Cmd+S on a Mac) before you refresh the page, or the browser will still show the old version.
+
+You'll also need something to read. In the same folder, create a plain text file named `menu.txt` with a few lines, like `Adobo - 150` and `Sinigang - 180`. The line-by-line example reads `order-log.txt`, which you created in the last chapter.
+
 **The simple, common case**
 
 ```php

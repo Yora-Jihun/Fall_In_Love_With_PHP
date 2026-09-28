@@ -27,6 +27,8 @@ PHP is a **loosely typed** language. You don't have to declare, up front, "this 
 
 ## In the Code Kitchen
 
+Create a new file named `data-types.php` in your `kitchen` folder, and open it at `http://kitchen.test/data-types.php`. Type each example below into that file, one at a time. Save the file (Ctrl+S, or Cmd+S on a Mac) before you refresh the page, or the browser will still show the old version.
+
 You can check any variable's current type with `gettype()`, and inspect its full value and type together with `var_dump()`:
 
 ```php

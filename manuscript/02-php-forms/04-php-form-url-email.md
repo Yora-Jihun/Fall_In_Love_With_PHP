@@ -21,6 +21,8 @@ It's worth being precise about what this actually guarantees: `FILTER_VALIDATE_E
 
 ## In the Code Kitchen
 
+Create a new file named `contact.php` in your `kitchen` folder, and open it at `http://kitchen.test/contact.php`. The example below is the PHP part of the page. Below it, add a form with an `email` field and a `website` field, built the same way as the order form in Chapter 23. Save the file (Ctrl+S, or Cmd+S on a Mac) before you refresh the page.
+
 ```php
 <?php
 

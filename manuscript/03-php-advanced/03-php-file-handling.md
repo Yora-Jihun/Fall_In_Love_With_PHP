@@ -21,6 +21,8 @@ PHP also offers a simpler pair of functions for the extremely common case of han
 
 ## In the Code Kitchen
 
+Create a new file named `file-handling.php` in your `kitchen` folder, and open it at `http://kitchen.test/file-handling.php`. Type each example below into that file, one at a time, and save it (Ctrl+S, or Cmd+S on a Mac) before you refresh the page. The examples work with a text file named `order-log.txt` in the same folder. You don't need to make it yourself. The second example creates it the first time it runs.
+
 ```php
 <?php
 

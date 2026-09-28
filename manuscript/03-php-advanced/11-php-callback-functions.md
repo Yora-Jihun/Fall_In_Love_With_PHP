@@ -20,6 +20,8 @@ You've already been using this idea without the formal name. Back in the Arrays 
 
 ## In the Code Kitchen
 
+Create a new file named `callbacks.php` in your `kitchen` folder, and open it at `http://kitchen.test/callbacks.php`. Type each example below into that file, one at a time. Save the file (Ctrl+S, or Cmd+S on a Mac) before you refresh the page, or the browser will still show the old version.
+
 **Passing a named function**
 
 ```php

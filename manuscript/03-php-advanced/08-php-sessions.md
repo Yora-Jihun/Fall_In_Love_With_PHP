@@ -18,7 +18,9 @@ Every page that wants to use sessions must call `session_start()` first, before 
 
 ## In the Code Kitchen
 
-**Starting a session and storing data in it**
+Sessions are about remembering data *across* pages, so each example below goes in its own file in your `kitchen` folder. Save each one (Ctrl+S, or Cmd+S on a Mac) before you start. Open `http://kitchen.test/start-session.php` first (the page stays blank, which is expected), then `welcome.php` to see the data come back. Open `check-login.php` any time, and `logout.php` to end the session, then reload `welcome.php` to see the name is gone.
+
+**Starting a session and storing data in it**, in `start-session.php`
 
 ```php
 <?php
@@ -28,7 +30,7 @@ $_SESSION["customerName"] = "Jirrum";
 $_SESSION["cart"] = ["Adobo", "Sinigang"];
 ```
 
-**Reading session data back on a later page**, after calling `session_start()` again
+**Reading session data back on a later page**, in `welcome.php`, after calling `session_start()` again
 
 ```php
 <?php
@@ -40,7 +42,7 @@ echo "Welcome back, " . htmlspecialchars($name) . "!";
 
 Because `session_start()` reconnects to the same session using that one small cookie, `$_SESSION` picks up exactly where it left off, as long as the visitor hasn't cleared their cookies or the session hasn't expired.
 
-**Ending a session**, commonly done on logout
+**Ending a session**, in `logout.php`, commonly done on logout
 
 ```php
 <?php
@@ -51,7 +53,7 @@ session_destroy();        // destroy the session on the server
 setcookie(session_name(), "", time() - 3600, "/"); // remove the session cookie itself
 ```
 
-**A simple login-state check**, a preview of a pattern you'll use constantly in any real application
+**A simple login-state check**, in `check-login.php`, a preview of a pattern you'll use constantly in any real application
 
 ```php
 <?php

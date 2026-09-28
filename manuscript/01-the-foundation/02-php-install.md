@@ -74,6 +74,7 @@ This should print a version number starting with `8.` This book was written and 
 - **Never use the built-in server for a real, public website.** It's single-threaded and made for local development only. It's a small practice stove, not a commercial kitchen. The PHP manual itself is explicit about this.
 - **Keep your local setup and your live website separate in your head from day one.** The practice kitchen (your machine) is where you're allowed to burn things. A production server, one that real visitors use, is not.
 - **Keep PHP up to date.** Herd makes this one click, so there's no reason to skip it. Newer versions bring fixes and new features.
+- **Save before you refresh.** The browser only sees what's saved on disk, not what's typed in your editor. Press Ctrl+S (Cmd+S on a Mac) after every change. VS Code marks an unsaved file with a dot on its tab. If a change "didn't work," check for that dot first. You can also turn on **File > Auto Save** in VS Code so it saves for you.
 
 ## Yoras' Mistake
 

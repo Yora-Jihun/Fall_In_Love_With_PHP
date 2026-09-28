@@ -22,6 +22,8 @@ There's no new syntax in this chapter. It's a synthesis of Chapters 22 through 2
 
 ## In the Code Kitchen
 
+Create a new file named `order-form.php` in your `kitchen` folder, and open it at `http://kitchen.test/order-form.php`. The whole example below goes into that one file. Save it (Ctrl+S, or Cmd+S on a Mac) before you refresh the page.
+
 ```php
 <?php
 

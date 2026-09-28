@@ -19,6 +19,8 @@ The reliable version of this check has two parts, and skipping either one causes
 
 ## In the Code Kitchen
 
+Keep working in `order.php`. The first two examples below show only the PHP checks. They go at the top of the file, above the form, in place of the checks from the last chapter.
+
 ```php
 <?php
 

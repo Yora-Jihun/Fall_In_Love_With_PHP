@@ -21,6 +21,8 @@ PHP's built-in `Exception` class covers most everyday needs, but you can also cr
 
 ## In the Code Kitchen
 
+Create a new file named `exceptions.php` in your `kitchen` folder, and open it at `http://kitchen.test/exceptions.php`. Type each example below into that file, one at a time. Save the file (Ctrl+S, or Cmd+S on a Mac) before you refresh the page, or the browser will still show the old version.
+
 **Basic try, throw, catch**
 
 ```php

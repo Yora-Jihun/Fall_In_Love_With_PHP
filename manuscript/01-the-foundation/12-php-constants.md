@@ -23,6 +23,8 @@ Constants don't use the `$` prefix that variables use, and once defined, a const
 
 ## In the Code Kitchen
 
+Create a new file named `constants.php` in your `kitchen` folder, and open it at `http://kitchen.test/constants.php`. Type each example below into that file, one at a time. Save the file (Ctrl+S, or Cmd+S on a Mac) before you refresh the page, or the browser will still show the old version.
+
 ```php
 <?php
 

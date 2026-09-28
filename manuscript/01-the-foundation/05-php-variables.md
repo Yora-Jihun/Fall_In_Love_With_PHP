@@ -25,6 +25,8 @@ You put a value into a container using the assignment operator, `=`. This isn't 
 
 ## In the Code Kitchen
 
+Create a new file named `variables.php` in your `kitchen` folder, and open it at `http://kitchen.test/variables.php`. Type each example below into that file, one at a time. Save the file (Ctrl+S, or Cmd+S on a Mac) before you refresh the page, or the browser will still show the old version.
+
 ```php
 <?php
 

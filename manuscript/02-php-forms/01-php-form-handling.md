@@ -24,6 +24,8 @@ Once a form is submitted, its values land in the matching superglobal from Chapt
 
 ## In the Code Kitchen
 
+Create a new file named `order.php` in your `kitchen` folder, and open it at `http://kitchen.test/order.php`. You'll keep using this file for the next few chapters. Every time you change it, save it (Ctrl+S, or Cmd+S on a Mac) before you refresh the page.
+
 A simple order form, submitting back to itself:
 
 ```html
@@ -38,7 +40,7 @@ A simple order form, submitting back to itself:
 </form>
 ```
 
-Handling it in PHP, checking the request method first before trying to read any submitted data:
+Now replace everything in `order.php` with this full version, which handles the form in PHP, checking the request method first before trying to read any submitted data:
 
 ```php
 <?php

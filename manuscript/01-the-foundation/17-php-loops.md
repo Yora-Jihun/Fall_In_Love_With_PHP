@@ -21,6 +21,8 @@ Two keywords work inside any loop: `break` exits the loop immediately, and `cont
 
 ## In the Code Kitchen
 
+Create a new file named `loops.php` in your `kitchen` folder, and open it at `http://kitchen.test/loops.php`. Type each example below into that file, one at a time. Save the file (Ctrl+S, or Cmd+S on a Mac) before you refresh the page, or the browser will still show the old version.
+
 **`while`**
 
 ```php

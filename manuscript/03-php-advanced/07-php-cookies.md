@@ -24,7 +24,9 @@ Once set, a cookie's value shows up in the `$_COOKIE` superglobal on every subse
 
 ## In the Code Kitchen
 
-**Setting a cookie**
+A cookie only shows its value on the *next* request, so this chapter uses three small files in your `kitchen` folder, one for each step. Save all three (Ctrl+S, or Cmd+S on a Mac) before you start. Open `http://kitchen.test/set-cookie.php` first (the page stays blank, which is expected), then `http://kitchen.test/read-cookie.php` to see the cookie come back. Finally, open `delete-cookie.php`, then reload `read-cookie.php` to see it's gone.
+
+**Setting a cookie**, in `set-cookie.php`
 
 ```php
 <?php
@@ -43,7 +45,7 @@ setcookie(
 
 `setcookie()` must be called before any actual output (any HTML, any `echo`) is sent to the browser, since cookies are sent as part of the response headers, which have to go out first.
 
-**Reading a cookie back**, on any later page load or visit:
+**Reading a cookie back**, in `read-cookie.php`, on any later page load or visit:
 
 ```php
 <?php
@@ -52,7 +54,7 @@ $theme = $_COOKIE["preferredTheme"] ?? "light"; // default if the cookie was nev
 echo "Using theme: " . htmlspecialchars($theme);
 ```
 
-**Deleting a cookie**, by setting its expiration to a moment in the past:
+**Deleting a cookie**, in `delete-cookie.php`, by setting its expiration to a moment in the past:
 
 ```php
 <?php
