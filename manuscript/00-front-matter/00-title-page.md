@@ -2,7 +2,7 @@
 
 ### Learn to Code in PHP, Filipino-Style
 
-**by Jerome Edica**
+**by Yora Ji-hun**
 
 ---
 

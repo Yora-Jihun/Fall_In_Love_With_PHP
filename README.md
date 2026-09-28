@@ -1,4 +1,4 @@
-# The Code Kitchen: Learn to Code in PHP, Filipino-Style, by Jerome Edica
+# The Code Kitchen: Learn to Code in PHP, Filipino-Style, by Yora Ji-hun
 
 A PHP ebook that teaches the language through one running story: an apprenticeship in a Filipino kitchen, **Chef Jirrum's Kitchen**. Written entirely in plain English (with Filipino dish names explained on first use) so it's approachable for any reader. Built for both first-time programmers and working developers who want PHP specifically.
 
