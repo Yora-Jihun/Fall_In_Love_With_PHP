@@ -111,6 +111,8 @@ This incorrectly accepts a five-digit input. Without `^` and `$` anchoring the p
 ```php
 <?php
 
+$pin = "12345";
+
 if (preg_match("/^\d{4}$/", $pin)) {
     echo "Valid PIN.";
 } else {

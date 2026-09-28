@@ -17,7 +17,7 @@ An **exception** is PHP's structured way of signaling that something went wrong,
 - **`catch`** defines what to do if a specific type of exception was thrown inside the `try` block.
 - **`finally`** defines code that runs no matter what happened, whether an exception was thrown or not, commonly used for cleanup, like closing a file handle from the File Handling chapter.
 
-PHP's built-in `Exception` class covers most everyday needs, but you can also create your own custom exception types by extending it, a first, gentle preview of the class inheritance covered properly in Part 4.
+PHP's built-in `Exception` class covers most everyday needs, but you can also create your own custom exception types by extending it. This uses a feature of classes called inheritance. You don't need to understand classes yet to follow the example below. Just copy its shape.
 
 ## In the Code Kitchen
 
@@ -101,7 +101,7 @@ Custom exception classes let you `catch` different kinds of problems differently
 
 ## Yoras' Mistake
 
-Yoras catches an exception, but does nothing meaningful with it:
+Yoras catches an exception, but does nothing meaningful with it. (This uses the `calculateServingSize()` function from the first example, so keep that function in the file if you try it.)
 
 ```php
 <?php
@@ -132,4 +132,4 @@ The exception is caught, so the script doesn't crash outright, but nothing about
 - Reserve exceptions for genuinely exceptional situations, not routine, expected outcomes.
 - Never leave a `catch` block empty. Handling an exception means actually doing something about it.
 
-This closes out **Part 3: PHP Advanced**. Next up: **Part 4, PHP OOP**, where the recipe card itself becomes something you can build an entire kitchen system around.
+This closes out **Part 3: PHP Advanced**, and with it, this book. You started with a single `echo` and now know how to handle forms, files, cookies, sessions, and what to do when something goes wrong. When you're ready for the next step, look into object-oriented programming (OOP), a way of organizing bigger projects around classes and objects. Until then, keep cooking.

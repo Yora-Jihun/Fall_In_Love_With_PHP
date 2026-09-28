@@ -16,7 +16,7 @@ A **variable** is a named container that holds a single value, which can change 
 
 A few rules govern what a variable name is allowed to look like:
 
-- It must start with a letter or an underscore, never a number. `$1total` is invalid; `$total1` is fine.
+- It must start with a letter or an underscore, never a number. `$1total` is invalid. `$total1` is fine.
 - After that first character, it can contain letters, numbers, and underscores.
 - It's case-sensitive. `$total` and `$Total` are two separate, unrelated containers.
 - PHP is a loosely typed language, meaning a variable isn't locked into holding only one kind of value forever. `$x` can hold a number today and a piece of text tomorrow. (Chapter 7 covers the actual data types a variable can hold.)
@@ -56,11 +56,11 @@ You can also build a new variable out of others:
 ```php
 <?php
 
-$firstName = "Jirrum";
-$lastName = "Edica";
+$firstName = "Yora";
+$lastName = "Ji-hun";
 $fullName = $firstName . " " . $lastName;
 
-echo $fullName; // Jirrum Edica
+echo $fullName; // Yora Ji-hun
 ```
 
 That `.` is the string concatenation operator, joining pieces of text together. It gets its own detailed look in the Strings chapter.
@@ -73,7 +73,7 @@ That `.` is the string concatenation operator, joining pieces of text together. 
 
 ## Yoras' Mistake
 
-Yoras writes this, expecting it to print `true`:
+Yoras writes this, expecting it to print nothing, since `$isReady` is `false`:
 
 ```php
 <?php

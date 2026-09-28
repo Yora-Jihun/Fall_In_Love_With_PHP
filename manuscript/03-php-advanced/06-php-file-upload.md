@@ -104,7 +104,7 @@ if ($file["type"] === "image/jpeg" || $file["type"] === "image/png") {
 }
 ```
 
-This looks reasonable, but it has two real problems. First, `$file["type"]` is exactly what the visitor's browser *claims* the file is, and a malicious visitor can send any value they want here, regardless of the file's actual content. Second, using `$file["name"]` directly means a visitor could upload a file literally named something like `../../config.php`, attempting the exact path traversal issue flagged back in the File Handling chapter, potentially overwriting a file well outside the intended uploads folder.
+This looks reasonable, but it has two real problems. First, `$file["type"]` is exactly what the visitor's browser *claims* the file is, and a malicious visitor can send any value they want here, regardless of the file's actual content. Second, using `$file["name"]` directly lets the visitor choose the saved file's name. A visitor could upload a file named `shell.php`, full of their own PHP code, while claiming it's an image. Since the uploads folder sits inside the website, simply visiting that file's address could run their code on your server. Reusing visitor names also lets one upload quietly overwrite another file with the same name.
 
 **Lesson:** verify a file's actual content type independently, never from a value the browser sent, and always generate a fresh, random filename yourself rather than trusting anything about the name the visitor's file arrived with.
 

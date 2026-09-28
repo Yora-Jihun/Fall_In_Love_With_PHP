@@ -69,7 +69,7 @@ $price = 100;
 echo $price;
 ```
 
-Every line after the opening `/*` silently disappears into the comment, including the actual code, because PHP is still waiting for `*/` to show up. Nothing runs, and no error explains why, since as far as PHP is concerned, there's no code there at all to run.
+Every line after the opening `/*` silently disappears into the comment, including the actual code, because PHP is still waiting for `*/` to show up. Nothing runs, since as far as PHP is concerned, there's no code there at all to run. At most, PHP shows a small warning about an "unterminated comment," which is easy to miss.
 
 **Lesson:** always close a multi-line comment. If a chunk of code seems to have vanished for no reason, check for an unclosed `/*` above it.
 

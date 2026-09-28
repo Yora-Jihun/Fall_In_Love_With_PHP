@@ -48,23 +48,6 @@
 38. PHP JSON
 39. PHP Exceptions
 
-### Part 4: PHP OOP
-
-40. What is OOP
-41. PHP Classes and Objects
-42. PHP Constructor
-43. PHP Destructor
-44. PHP Access Modifiers
-45. PHP Inheritance
-46. PHP Class Constants
-47. PHP Abstract Classes
-48. PHP Interfaces
-49. PHP Traits
-50. PHP Static Methods
-51. PHP Static Properties
-52. PHP Namespaces
-53. PHP Iterables
-
 ---
 
-53 chapters in total, across 4 parts, plus front matter (title page, preface, this table of contents).
+39 chapters in total, across 3 parts, plus front matter (title page, copyright page, a message from the author, preface, and this table of contents).

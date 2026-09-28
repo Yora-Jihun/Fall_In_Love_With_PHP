@@ -62,7 +62,7 @@ echo "<br>";
 echo applyDiscount(200, 0.25); // overrides it with a 25% discount
 ```
 
-**Named arguments**, a modern PHP feature that lets you specify which parameter you're setting by name, useful when a function has several parameters and you want the call itself to read clearly:
+**Named arguments**, a modern PHP feature that lets you specify which parameter you're setting by name, useful when a function has several parameters and you want the call itself to read clearly. Add this line below the `applyDiscount()` example, in the same file, since it calls that function:
 
 ```php
 <?php
@@ -115,11 +115,11 @@ function addToTotal($amount) {
     echo $total;
 }
 
-addToTotal(50); // prints 50
+addToTotal(50); // prints 50, with a warning that $total is undefined
 echo $total;     // still 0, the outer $total was never touched
 ```
 
-Yoras expected the outer `$total` to become `50`. Instead, the function created its own separate, local `$total`, used it, and then it disappeared entirely once the function finished. The outer `$total` was never involved.
+Yoras expected the outer `$total` to become `50`. PHP even warns him that `$total` is undefined inside the function, since the outer one isn't visible there. Instead, the function created its own separate, local `$total`, used it, and then it disappeared entirely once the function finished. The outer `$total` was never involved.
 
 **Lesson:** a function can't see or change an outside variable unless that variable is explicitly passed in as a parameter, or explicitly returned and reassigned by the caller. The fix here is to return the new value and store it yourself:
 

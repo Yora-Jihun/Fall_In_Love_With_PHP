@@ -70,11 +70,11 @@ Yoras writes to a log file without checking whether `fopen()` succeeded:
 <?php
 
 $handle = fopen(__DIR__ . "/logs/order-log.txt", "a"); // "logs" folder doesn't exist yet
-fwrite($handle, "New order.\n"); // fails silently, with a warning
+fwrite($handle, "New order.\n"); // crashes: $handle is false, not a file
 fclose($handle);
 ```
 
-The `logs` folder was never created, so `fopen()` fails and returns `false`. `fwrite($handle, ...)` then tries to write using `false` as if it were a real file handle, which produces its own separate warning, and no log entry is ever actually written. Nothing crashes outright, but nothing works either, and the failure is easy to miss entirely if warnings aren't being displayed.
+The `logs` folder was never created, so `fopen()` shows a warning and returns `false`. Then `fwrite($handle, ...)` receives `false` instead of a real file handle. In modern PHP, that stops the script with a fatal `TypeError`, an error saying the value was the wrong type. The error points at the `fwrite()` line, one step away from the real cause: the missing folder.
 
 **Lesson:** always check `fopen()`'s return value before using it, and make sure any folder your file lives in actually exists first, either by creating it ahead of time or checking for it with `is_dir()` and creating it with `mkdir()` if needed.
 

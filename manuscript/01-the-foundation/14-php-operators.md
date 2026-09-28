@@ -32,6 +32,7 @@ Create a new file named `operators.php` in your `kitchen` folder, and open it at
 $total = 100;
 $total += 20; // same as $total = $total + 20
 echo $total;  // 120
+echo "<br>";
 
 $remaining = 10 % 3; // 1, the remainder after 10 divided by 3
 echo $remaining;
@@ -111,7 +112,7 @@ He enters the code `"0"`, a perfectly real, valid promo code, and gets "No code 
 
 ## Recap
 
-- Arithmetic operators handle math; assignment operators (including shortcuts like `+=`) store values.
+- Arithmetic operators handle math. Assignment operators (including shortcuts like `+=`) store values.
 - `==` compares loosely, converting types as needed. `===` compares strictly, checking both value and type.
 - Default to `===` and `!==` unless there's a specific, deliberate reason to allow loose comparison.
 - `&&`, `||`, and `!` combine conditions. `??` provides a fallback for a `null` or missing value.

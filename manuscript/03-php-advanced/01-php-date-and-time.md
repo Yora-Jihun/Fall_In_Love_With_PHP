@@ -15,6 +15,7 @@ PHP's `date()` function formats the current date and time (or a specific timesta
 - `Y`: four-digit year (2026)
 - `m`: two-digit month (01 to 12)
 - `d`: two-digit day (01 to 31)
+- `j`: day without a leading zero (1 to 31)
 - `H`: two-digit hour, 24-hour format
 - `i`: two-digit minutes
 - `s`: two-digit seconds
@@ -23,7 +24,7 @@ PHP's `date()` function formats the current date and time (or a specific timesta
 
 Underneath all of this is the **Unix timestamp**, a single number counting the seconds elapsed since January 1, 1970. `time()` returns the current timestamp. Nearly every date function in PHP either produces or accepts one of these numbers.
 
-For anything beyond simple formatting, especially date math (adding days, comparing two dates, handling timezones), PHP's object-oriented `DateTime` class is the more reliable, modern tool. It's introduced briefly here, and will feel more familiar once Part 4 covers classes and objects properly.
+For anything beyond simple formatting, especially date math (adding days, comparing two dates, handling timezones), PHP's object-oriented `DateTime` class is the more reliable, modern tool. It's introduced briefly here. You don't need to understand classes and objects yet. For now, just follow the examples as written. The `->` arrow is simply how you use one of `DateTime`'s built-in tools.
 
 ## In the Code Kitchen
 
@@ -48,7 +49,7 @@ echo date("H:i:s");           // 14:30:00
 
 $now = time();
 echo $now; // a large number, seconds since January 1, 1970
-
+echo "<br>";
 echo date("Y-m-d H:i:s", $now); // formats that specific timestamp
 ```
 
@@ -59,9 +60,10 @@ echo date("Y-m-d H:i:s", $now); // formats that specific timestamp
 
 $tomorrow = strtotime("+1 day");
 echo date("Y-m-d", $tomorrow);
+echo "<br>";
 
 $specificDate = strtotime("2026-12-25");
-echo date("l", $specificDate); // Friday (whatever day Dec 25, 2026 falls on)
+echo date("l", $specificDate); // Friday
 ```
 
 **The `DateTime` class, for anything more involved**
@@ -71,6 +73,7 @@ echo date("l", $specificDate); // Friday (whatever day Dec 25, 2026 falls on)
 
 $orderTime = new DateTime();
 echo $orderTime->format("Y-m-d H:i:s");
+echo "<br>";
 
 $orderTime->modify("+30 minutes");
 echo $orderTime->format("H:i:s"); // 30 minutes ahead of when it was created

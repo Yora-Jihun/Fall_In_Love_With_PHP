@@ -47,7 +47,7 @@ if ($handle) {
 }
 ```
 
-That `!== false` comparison matters. `fgets()` returns `false` specifically when it reaches the end of the file, and using `!==` (strict comparison, from Chapter 14) instead of `!=` avoids a subtle trap: a genuinely empty line in the file could otherwise be mistaken for the end of the file, depending on how loosely the comparison is written.
+That `!== false` comparison matters. `fgets()` returns `false` specifically when it reaches the end of the file, and using `!==` (strict comparison, from Chapter 14) avoids a subtle trap. If the last line of the file is just the character `0`, with no line break after it, a loose check treats that `"0"` as falsy, the same edge case from Chapter 7, and mistakes it for the end of the file.
 
 **Checking if a file exists before reading it**, tying back to the last chapter:
 
@@ -85,7 +85,7 @@ while ($line = fgets($handle)) {
 fclose($handle);
 ```
 
-This looks reasonable, but a line in the file that happens to be entirely empty, or one that evaluates as falsy for any reason, can cause the loop to stop early, treating that line as if it meant "end of file," even though more lines follow after it.
+This looks reasonable, and it works for most files. But if the last line is just `0`, with no line break after it, `fgets()` returns the string `"0"`. That's falsy, so the loop stops and skips it, treating a real line of data as if it meant "end of file."
 
 **Lesson:** always compare `fgets()`'s result against `false` explicitly, using `!== false`, rather than relying on the loosely truthy or falsy value of the line itself. This is a small, specific detail, but it's exactly the kind of edge case a careless comparison misses.
 
@@ -93,7 +93,7 @@ This looks reasonable, but a line in the file that happens to be entirely empty,
 
 1. Create a small text file with three lines of dish names, and read the whole thing at once with `file_get_contents()`.
 2. Read the same file line by line using `fopen()` and `fgets()`, printing each line separately.
-3. Add one genuinely blank line into the middle of the file, and confirm your line-by-line reading loop still correctly reads every line after it.
+3. Make the last line of the file just `0`, with no line break after it. Run Yoras' loop and the correct `!== false` loop, and compare which one prints that last line.
 
 ## Recap
 

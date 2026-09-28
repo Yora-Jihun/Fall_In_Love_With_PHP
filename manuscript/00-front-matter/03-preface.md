@@ -23,11 +23,10 @@ A few honest promises before we start cooking:
 
 ### How this book is organized
 
-The book follows four parts, cooked in order:
+The book follows three parts, cooked in order:
 
 1. **The Foundation**: the core ingredients and techniques of PHP. This covers variables, types, operators, conditionals, loops, functions, arrays, and pattern matching.
 2. **PHP Forms**: taking real input from real people (customers placing an order) safely and correctly.
 3. **PHP Advanced**: dates, files, uploads, cookies, sessions, filtering input, and handling things going wrong.
-4. **PHP OOP**: moving from cooking one dish at a time to building a proper, reusable recipe system. This covers classes, inheritance, interfaces, traits, and everything else object-oriented PHP offers.
 
 Tie on an apron. Chef Jirrum's Kitchen is open. Let's cook.

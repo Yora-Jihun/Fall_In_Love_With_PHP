@@ -27,7 +27,7 @@ switch (value) {
 
 The `break` at the end of each case matters more than it looks. Without it, PHP keeps running the code in the *next* case too, a behavior called "fall-through." Sometimes fall-through is intentional and useful. Far more often, forgetting `break` is an accident that produces confusing results.
 
-PHP also has a more modern alternative, the `match` expression, introduced in PHP 8.0. It fixes both of `switch`'s sharpest edges: it never falls through, and it compares strictly (like `===`) rather than loosely, and it can hand back a value directly, rather than only running code as a side effect.
+PHP also has a more modern alternative, the `match` expression, introduced in PHP 8.0. It fixes `switch`'s two sharpest edges: it never falls through, and it compares strictly (like `===`) rather than loosely. It can also hand back a value directly, rather than only running code as a side effect.
 
 ## In the Code Kitchen
 
@@ -42,7 +42,7 @@ $day = "Friday";
 
 switch ($day) {
     case "Monday":
-        echo "Monggo beans today.";
+        echo "Monggo beans today."; // monggo: mung bean stew
         break;
     case "Friday":
         echo "Fish is on the menu.";

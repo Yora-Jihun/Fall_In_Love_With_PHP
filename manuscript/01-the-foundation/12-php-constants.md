@@ -54,7 +54,7 @@ Trying to change a constant after it's defined produces an error, which is exact
 <?php
 
 const TAX_RATE = 0.12;
-TAX_RATE = 0.15; // Fatal error: this line is not valid PHP
+TAX_RATE = 0.15; // Parse error: PHP refuses to run this file at all
 ```
 
 ## Kitchen Notes (Best Practices)
@@ -76,7 +76,7 @@ const OPENING_HOUR = 8;
 OPENING_HOUR = 10;
 ```
 
-This crashes the script entirely, with a fatal error, because a constant is exactly that: constant. Yoras actually wanted a value that changes under certain conditions, which means he wanted a variable, not a constant, or a conditional check that picks a different value depending on the day.
+PHP refuses to run the script at all. It stops with a parse error (an error about code that isn't valid PHP), because a constant is exactly that: constant. Yoras actually wanted a value that changes under certain conditions, which means he wanted a variable, not a constant, or a conditional check that picks a different value depending on the day.
 
 **Lesson:** if a value needs to change during the life of the script, even occasionally, it isn't a constant. Use a variable, and add whatever conditional logic decides which value applies.
 

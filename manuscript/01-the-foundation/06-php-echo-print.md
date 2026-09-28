@@ -52,7 +52,7 @@ echo "<br>";
 echo "Today's special is $dish.";         // interpolation, double quotes only
 ```
 
-Both lines print the same thing. Interpolation, dropping the variable name directly inside a double-quoted string, is often considered more readable once you're comfortable with it. Single quotes never interpolate. `'Today's special is $dish.'` would print the literal text `$dish`, dollar sign and all, not the value inside it. Chapter 8 covers this distinction in full.
+Both lines print the same thing. Interpolation, dropping the variable name directly inside a double-quoted string, is often considered more readable once you're comfortable with it. Single quotes never interpolate. `'Special: $dish'` would print the literal text `$dish`, dollar sign and all, not the value inside it. Chapter 8 covers this distinction in full.
 
 ## Kitchen Notes (Best Practices)
 
@@ -83,7 +83,7 @@ Single quotes don't interpolate variables. Inside single quotes, `$total` is jus
 
 ## Recap
 
-- `echo` and `print` both send output to the browser. `echo` accepts multiple values and has no return value; `print` accepts one value and returns `1`.
+- `echo` and `print` both send output to the browser. `echo` accepts multiple values and has no return value. `print` accepts one value and returns `1`.
 - Double-quoted strings support variable interpolation. Single-quoted strings do not.
 - `<br>` or proper HTML tags control visible line breaks in the browser. Blank lines in your PHP file don't.
 - Any user-supplied value needs to be escaped before it's echoed into HTML, a rule that becomes essential once real input enters the picture.

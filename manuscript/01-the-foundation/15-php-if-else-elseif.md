@@ -70,6 +70,9 @@ That same logic often reads more cleanly by combining conditions with `&&`, from
 ```php
 <?php
 
+$isOpen = true;
+$hasIngredient = false;
+
 if ($isOpen && $hasIngredient) {
     echo "We can make that dish today.";
 }
@@ -83,7 +86,7 @@ if ($isOpen && $hasIngredient) {
 
 ## Yoras' Mistake
 
-Yoras writes this to check whether an order quantity is exactly one:
+Yoras writes this to check whether an order quantity is exactly two:
 
 ```php
 <?php

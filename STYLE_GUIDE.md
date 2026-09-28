@@ -134,4 +134,4 @@ Front matter, then **The Foundation** (Introduction through Regex), then **PHP F
 - [x] **Part 1, The Foundation: complete** (Chapters 1 to 21, PHP Introduction through PHP Regex)
 - [x] **Part 2, PHP Forms: complete** (Chapters 22 to 26, Form Handling through the complete example)
 - [x] **Part 3, PHP Advanced: complete** (Chapters 27 to 39, Date and Time through Exceptions)
-- [ ] Part 4, PHP OOP (Chapters 40 to 53)
+- [ ] Part 4, PHP OOP (Chapters 40 to 53): moved out of the first edition, planned for a later volume or update

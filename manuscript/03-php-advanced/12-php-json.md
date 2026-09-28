@@ -38,7 +38,7 @@ echo $json;
 // {"name":"Sinigang","price":180,"spicy":false,"tags":["sour","soup"]}
 ```
 
-For readable, human-friendly output, useful while developing or debugging, add the `JSON_PRETTY_PRINT` flag:
+For readable, human-friendly output, useful while developing or debugging, add the `JSON_PRETTY_PRINT` flag. Add this line below the first example, in the same file, since it uses the same `$dish`:
 
 ```php
 <?php

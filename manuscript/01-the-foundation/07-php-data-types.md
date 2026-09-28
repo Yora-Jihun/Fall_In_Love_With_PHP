@@ -1,4 +1,4 @@
-# Chapter 7: PHP Data / Types
+# Chapter 7: PHP Data Types
 
 ### Kinds of Ingredients
 
@@ -21,9 +21,9 @@ PHP recognizes several core data types. The ones you'll use constantly, starting
 Two more you'll meet less often at first, but should recognize:
 
 - **null**: a special value meaning "no value at all." Not zero, not an empty string. Genuinely nothing.
-- **object**: an instance of a class, the foundation of object-oriented PHP, covered in Part 4 of this book.
+- **object**: an instance of a class, the foundation of object-oriented PHP, a more advanced topic you'll meet after this book.
 
-PHP is a **loosely typed** language. You don't have to declare, up front, "this variable will only ever hold a string." A variable's type is decided automatically, based on whatever value you put into it, and it can change if you put something else in later. This is convenient for quick scripts, and it's exactly why the "measure, don't eyeball it" habit from the style of this book (type-safe function signatures, `declare(strict_types=1)`, and so on) matters more, not less, as your code grows. Loose typing gives you freedom. Discipline is what keeps that freedom from turning into confusion.
+PHP is a **loosely typed** language. You don't have to declare, up front, "this variable will only ever hold a string." A variable's type is decided automatically, based on whatever value you put into it, and it can change if you put something else in later. This is convenient for quick scripts, and it's exactly why the "measure, don't eyeball it" habit this book teaches (type-safe function signatures, `declare(strict_types=1)`, and so on) matters more, not less, as your code grows. Loose typing gives you freedom. Discipline is what keeps that freedom from turning into confusion.
 
 ## In the Code Kitchen
 
@@ -77,7 +77,7 @@ if (is_int($servings)) {
 
 ## Yoras' Mistake
 
-Yoras writes this and is confused why it doesn't behave like a plain "yes":
+Yoras writes this and is confused why it behaves like a "yes" instead of a "no":
 
 ```php
 <?php

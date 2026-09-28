@@ -85,7 +85,7 @@ foreach ($menu as $dish) {
 }
 ```
 
-That `<=>` is the "spaceship operator" from Chapter 14's operator overview, returning `-1`, `0`, or `1` depending on whether the left side is less than, equal to, or greater than the right side, exactly the shape `usort()` expects from its comparison callback.
+That `<=>` is called the "spaceship operator," because of its shape. It compares two values and returns `-1`, `0`, or `1` depending on whether the left side is less than, equal to, or greater than the right side, exactly the shape `usort()` expects from its comparison callback.
 
 ## Kitchen Notes (Best Practices)
 
@@ -109,7 +109,7 @@ $applyDiscount = function ($price) {
 echo $applyDiscount(100);
 ```
 
-This produces an error, since `$discountRate` doesn't exist inside the closure at all. A closure, unlike an arrow function, does not automatically see variables from the surrounding code. It only sees what's explicitly passed to it as a parameter, or explicitly captured with `use`.
+This prints `100`, with no discount at all, along with a warning that `$discountRate` is undefined. The variable doesn't exist inside the closure, so PHP treats it as empty. A closure, unlike an arrow function, does not automatically see variables from the surrounding code. It only sees what's explicitly passed to it as a parameter, or explicitly captured with `use`.
 
 **Lesson:** an anonymous function needs `use ($variable)` to reach outside its own body for a variable from the surrounding code. Arrow functions handle this automatically, which is exactly why they're the more convenient default for short callbacks.
 

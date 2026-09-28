@@ -12,7 +12,7 @@ You came to Chef Jirrum's Kitchen to learn how to code. So you expected a classr
 
 "You're in the right place," says Chef Jirrum. He's at the counter, wiping down a surface that doesn't look dirty. "You came to learn to code, and you will. You'll just learn it the way a cook learns a kitchen."
 
-He finally looks up. "Cook," he says. I guess that's your name now. "Why are you here?"
+He finally looks up. "Cook," he says. You guess that's your name now. "Why are you here?"
 
 You say, a little quietly, that you want to build websites.
 
@@ -85,7 +85,7 @@ It isn't broken. The server looked at the file, saw it wasn't actually a `.php` 
 
 ## Take-Home Practice
 
-You don't have a local server running yet. That's next chapter. So cook these with pen, paper, and curiosity:
+You don't have a local server running yet. That's the next chapter. So cook these with pen, paper, and curiosity:
 
 1. In your own words, explain "server-side" to a friend who has never coded, using a food or restaurant comparison that isn't the one from this chapter.
 2. Name three websites or apps you use regularly. Do a quick search on whether any of them are known to run on PHP, WordPress, or a PHP-based framework. You may be surprised how many are.

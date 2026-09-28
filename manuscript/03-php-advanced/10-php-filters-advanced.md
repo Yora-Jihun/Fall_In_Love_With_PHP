@@ -57,7 +57,7 @@ $data = filter_input_array(INPUT_POST, $filters);
 
 $errors = [];
 
-if (empty(trim($data["customerName"] ?? ""))) {
+if (trim($data["customerName"] ?? "") === "") {
     $errors[] = "Please enter your name.";
 }
 

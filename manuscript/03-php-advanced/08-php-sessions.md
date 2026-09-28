@@ -93,7 +93,7 @@ Even after switching to sessions for everything else, this line still reads the 
 
 ## Take-Home Practice
 
-1. Start a session, store a customer's name and a small cart array in it, then read both back on a simulated "second page" (a second `session_start()` call further down the same script, or a second file).
+1. Start a session, store a customer's name and a small cart array in it, then read both back from a second file, the same way `welcome.php` does in this chapter.
 2. Write the code to fully log a visitor out: clearing `$_SESSION`, calling `session_destroy()`, and removing the session cookie.
 3. Explain, in your own words, why `session_regenerate_id()` matters immediately after a successful login.
 

@@ -33,7 +33,7 @@ var_dump(filter_var("true", FILTER_VALIDATE_BOOLEAN));   // bool(true)
 var_dump(filter_var("no", FILTER_VALIDATE_BOOLEAN));     // bool(false)
 ```
 
-Notice `FILTER_VALIDATE_INT` is meaningfully stricter than the `is_numeric()` check used back in Chapter 10. It correctly rejects a string like `"3 items"`, where `is_numeric()` alone wouldn't necessarily catch every case you'd want caught.
+Notice `FILTER_VALIDATE_INT` is meaningfully stricter than the `is_numeric()` check used back in Chapter 10. `is_numeric()` happily accepts strings like `"5.5"` or `"1e3"`, since they're valid numbers. `FILTER_VALIDATE_INT` rejects both, because neither is a plain whole number.
 
 **Sanitizing filters**
 
