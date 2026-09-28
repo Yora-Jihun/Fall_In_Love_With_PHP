@@ -95,13 +95,27 @@ if ($total == 0.3) {
 
 It prints "Something's off," even though `0.1 + 0.2` looks like it obviously equals `0.3`. This is the float precision issue described above. The actual stored value is extremely close to `0.3`, but not exactly equal to it at the level of precision PHP checks.
 
-**Lesson:** don't test floats for exact equality. If a comparison like this is ever truly necessary, check whether the difference between the two values is smaller than a very small threshold, instead of using `==` directly.
+**Lesson:** don't test floats for exact equality. If a comparison like this is ever truly necessary, check whether the difference between the two values is smaller than a very small threshold, instead of using `==` directly:
+
+```php
+<?php
+
+$total = 0.1 + 0.2;
+
+if (abs($total - 0.3) < 0.00001) {
+    echo "Correct total.";
+} else {
+    echo "Something's off.";
+}
+```
+
+`abs()` gives the size of the difference, whichever number is bigger. If that difference is tinier than `0.00001`, the two values are close enough to count as equal.
 
 ## Take-Home Practice
 
 1. Calculate the total cost of 3 items priced at 45.75 each, then display it using `number_format()` with two decimal places.
 2. Use `is_numeric()` to check three different values: an actual number, a numeric string like `"42"`, and a non-numeric string like `"forty-two"`.
-3. Try `0.1 + 0.2 == 0.3` yourself and confirm what this chapter described.
+3. Run `var_dump(0.1 + 0.2);` and look at the real stored value. (`echo` would show a clean `0.3`, because it rounds numbers for display.) Then try `0.1 + 0.2 == 0.3` and confirm what this chapter described.
 
 ## Recap
 
