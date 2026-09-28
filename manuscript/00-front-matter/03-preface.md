@@ -1,4 +1,4 @@
-# Preface: Welcome to the Kitchen
+# Welcome to the Kitchen
 
 The first time most people see PHP code, it looks like someone spilled punctuation on the screen. Angle brackets, dollar signs, and semicolons standing guard at the end of every line. It looks like a language built to keep people out.
 

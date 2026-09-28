@@ -15,6 +15,5 @@ description: >-
   through the story of a Filipino kitchen.
 cover-image: manuscript/00-front-matter/FRONT.png
 css: build/epub.css
-epub-title-page: false
 toc-title: Contents
 ---

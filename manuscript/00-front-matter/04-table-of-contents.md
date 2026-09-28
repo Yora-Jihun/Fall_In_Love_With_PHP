@@ -56,4 +56,4 @@
 
 ---
 
-39 chapters in total, across 3 parts, plus front matter (title page, copyright page, a message from the author, preface, and this table of contents) and a short closing section.
+39 chapters in total, across 3 parts, plus front matter (title page, copyright page, a message from the author, "Welcome to the Kitchen," and this table of contents) and a short closing section.

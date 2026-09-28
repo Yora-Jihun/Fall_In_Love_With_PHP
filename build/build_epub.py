@@ -103,6 +103,9 @@ def main() -> int:
         "--toc",
         "--toc-depth=1",
         "--split-level=1",
+        # The book has its own title page and copyright page, so Pandoc's
+        # automatic one would only repeat them.
+        "--epub-title-page=false",
         f"--resource-path={ROOT}",
         f"--output={OUTPUT}",
         *map(str, inputs),

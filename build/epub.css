@@ -68,10 +68,13 @@ li > p {
   margin-bottom: 0.5em;
 }
 
+/* The line under each chapter's title: a short accent in the PHP purple
+   from the cover, instead of a full-width rule. */
 hr {
+  width: 3em;
   border: none;
-  border-top: 1px solid #999;
-  margin: 1.5em 0;
+  border-top: 3px solid #777bb4;
+  margin: 1.2em 0 1.6em;
 }
 
 code {
