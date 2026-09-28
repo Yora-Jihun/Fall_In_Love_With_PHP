@@ -1,6 +1,6 @@
-# Fall in Love with PHP
+# The Code Kitchen
 
-### A Beginner-to-Professional Guide to PHP, Cooked Filipino-Style
+### Learn to Code in PHP, Filipino-Style
 
 **by Jerome Edica**
 

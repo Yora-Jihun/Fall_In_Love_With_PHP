@@ -32,9 +32,9 @@ For anything beyond simple formatting, especially date math (adding days, compar
 ```php
 <?php
 
-echo date("Y-m-d");           // 2026-09-12
+echo date("Y-m-d");           // 2026-09-28
 echo "<br>";
-echo date("l, F j, Y");       // Friday, September 12, 2026
+echo date("l, F j, Y");       // Monday, September 28, 2026
 echo "<br>";
 echo date("H:i:s");           // 14:30:00
 ```
@@ -102,7 +102,7 @@ This works fine most of the day, but at 10:01 PM, `$secondsLeft` becomes negativ
 
 ## Take-Home Practice
 
-1. Print today's date in the format "Month Day, Year" (for example, "September 12, 2026").
+1. Print today's date in the format "Month Day, Year" (for example, "September 28, 2026").
 2. Use `strtotime()` to calculate and print the date exactly one week from today.
 3. Create a `DateTime` object, add 2 hours to it with `modify()`, and print the result.
 

@@ -1,4 +1,4 @@
-# The Book Bible: "Fall in Love with PHP"
+# The Book Bible: "The Code Kitchen"
 
 This file is the single source of truth for how every chapter is written. Read this before writing or editing any chapter. It keeps the writing style, the running story, and the technical standards consistent across all ~50 chapters.
 
