@@ -1,0 +1,20 @@
+---
+title:
+  - type: main
+    text: The Code Kitchen
+  - type: subtitle
+    text: Learn to Code in PHP, Filipino-Style
+creator:
+  - role: author
+    text: Yora Ji-hun
+lang: en-US
+rights: Copyright © 2027 Yora Ji-hun. All rights reserved.
+subject: PHP programming
+description: >-
+  A beginner-friendly PHP programming book that explains every concept
+  through the story of a Filipino kitchen.
+cover-image: manuscript/00-front-matter/FRONT.png
+css: build/epub.css
+epub-title-page: false
+toc-title: Contents
+---

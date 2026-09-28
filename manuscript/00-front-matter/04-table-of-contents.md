@@ -48,6 +48,12 @@
 38. PHP JSON
 39. PHP Exceptions
 
+### Closing
+
+- Epilogue: Closing Time
+- What to Cook Next
+- Thank You
+
 ---
 
-39 chapters in total, across 3 parts, plus front matter (title page, copyright page, a message from the author, preface, and this table of contents).
+39 chapters in total, across 3 parts, plus front matter (title page, copyright page, a message from the author, preface, and this table of contents) and a short closing section.

@@ -132,4 +132,4 @@ The exception is caught, so the script doesn't crash outright, but nothing about
 - Reserve exceptions for genuinely exceptional situations, not routine, expected outcomes.
 - Never leave a `catch` block empty. Handling an exception means actually doing something about it.
 
-This closes out **Part 3: PHP Advanced**, and with it, this book. You started with a single `echo` and now know how to handle forms, files, cookies, sessions, and what to do when something goes wrong. When you're ready for the next step, look into object-oriented programming (OOP), a way of organizing bigger projects around classes and objects. Until then, keep cooking.
+This closes out **Part 3: PHP Advanced**, and the last chapter of this book. You started with a single `echo`, and now you can handle forms, files, cookies, sessions, and what to do when something goes wrong. There's just one thing left before the kitchen closes for the night.

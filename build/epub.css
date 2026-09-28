@@ -1,0 +1,233 @@
+/* Reading apps (Google Play Books, Apple Books, Kindle) already add their
+   own page margins, so the book adds none of its own. Extra margins here
+   would stack on top and waste width on a phone screen. */
+body {
+  font-family: serif;
+  line-height: 1.45;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  -webkit-hyphens: manual;
+  hyphens: manual;
+  orphans: 2;
+  widows: 2;
+}
+
+/* A closing line plus the author's signature always stay on one page. */
+div.signoff {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+h1,
+h2,
+h3 {
+  -webkit-hyphens: none;
+  hyphens: none;
+  page-break-after: avoid;
+  break-after: avoid;
+}
+
+h1 {
+  font-size: 1.6em;
+  line-height: 1.25;
+  margin: 1.2em 0 0.3em;
+  page-break-before: always;
+  break-before: page;
+}
+
+h2 {
+  font-size: 1.25em;
+  line-height: 1.3;
+  margin: 1.8em 0 0.6em;
+}
+
+h3 {
+  font-size: 1.05em;
+  font-style: italic;
+  font-weight: normal;
+  margin: 0 0 1.2em;
+}
+
+p {
+  margin: 0 0 0.9em;
+}
+
+/* Lists: the browser default indent (40px) eats a lot of a phone screen. */
+ul,
+ol {
+  margin: 0 0 1em;
+  padding-left: 1.3em;
+}
+
+li {
+  margin: 0 0 0.5em;
+}
+
+li > p {
+  margin-bottom: 0.5em;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #999;
+  margin: 1.5em 0;
+}
+
+code {
+  font-family: monospace;
+  font-size: 0.88em;
+  -webkit-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks: full width, small side padding, and long lines wrap
+   instead of running off the screen. */
+pre {
+  font-family: monospace;
+  font-size: 0.78em;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  background: #f4f2f8;
+  color: #1f1d2b;
+  border-left: 3px solid #777bb4;
+  border-radius: 3px;
+  padding: 0.6em 0.6em 0.6em 0.7em;
+  margin: 0.4em 0 1.1em;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+pre code {
+  font-size: 1em;
+}
+
+/* Code blocks inside numbered steps (Chapter 3) should not be squeezed
+   further by the list indent. */
+li pre {
+  margin-left: -0.3em;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9em;
+  margin: 0 0 1.1em;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 0.35em 0.45em;
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: break-word;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Contents page: the chapter titles already carry their own numbers, so
+   the list's automatic 1, 2, 3 would only clash with them. */
+nav#toc ol {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+nav#toc li {
+  margin: 0 0 0.45em;
+}
+
+nav#toc a {
+  text-decoration: none;
+}
+
+/* Title page: a short page, so everything is larger and centered.
+   Sizes are relative (em), so they still grow or shrink with the
+   reader's own font size setting. */
+section.front-page,
+h1.front-page {
+  text-align: center;
+}
+
+section.front-page h1,
+h1.front-page {
+  font-size: 2.4em;
+  line-height: 1.15;
+  text-align: center;
+  margin: 20% 0 0.5em;
+}
+
+div.tp-subtitle,
+div.tp-subtitle p,
+div.tp-author,
+div.tp-author p,
+div.tp-dedication,
+div.tp-dedication p {
+  text-align: center;
+  text-indent: 0;
+  -webkit-hyphens: none;
+  hyphens: none;
+}
+
+div.tp-subtitle p {
+  font-size: 1.3em;
+  font-style: italic;
+  line-height: 1.3;
+  margin: 0 0 2em;
+}
+
+div.tp-author p {
+  font-size: 1.15em;
+  font-weight: bold;
+  margin: 0;
+}
+
+div.tp-rule {
+  width: 30%;
+  margin: 2em auto;
+  border-top: 1px solid #999;
+}
+
+div.tp-dedication p {
+  font-size: 1.1em;
+  font-style: italic;
+  line-height: 1.4;
+  margin: 0 5%;
+}
+
+/* Thank You page: short, so larger and centered like the title page. */
+section.closing-page,
+h1.closing-page {
+  text-align: center;
+}
+
+section.closing-page h1,
+h1.closing-page {
+  font-size: 1.9em;
+  margin-top: 20%;
+  margin-bottom: 1em;
+}
+
+section.closing-page p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 1.2em;
+}
+
+/* Copyright page */
+section.copyright-page {
+  font-size: 0.85em;
+}
+
+section.copyright-page h1,
+h1.copyright-page {
+  font-size: 1em;
+  margin-top: 1em;
+}
